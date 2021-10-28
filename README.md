@@ -8,7 +8,6 @@ for soon, i will add the other actavation function and more, like nerual network
 
 I think no one is really gonna read this anyway, LIFE1UP!
 
-       ___------__
  |\__-- /\       _-
  |/    __      -
  //\  /  \    /__
