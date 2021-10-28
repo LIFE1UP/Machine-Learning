@@ -14,7 +14,7 @@ I think no one is really gonna read this anyway, LIFE1UP!
  //\  /  \    /__
  |  o|  0|__     --_
  \\____-- __ \   ___-
- (@@    __/  / /_
+ (    __/  / /_
     -_____---   --_
      //  \ \\   ___-
    //|\__/  \\  \
