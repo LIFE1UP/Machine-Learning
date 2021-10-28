@@ -8,16 +8,4 @@ for soon, i will add the other actavation function and more, like nerual network
 
 I think no one is really gonna read this anyway, LIFE1UP!
 
- |\__-- /\       _-
- |/    __      -
- //\  /  \    /__
- |  o|  0|__     --_
- \\____-- __ \   ___-
- (    __/  / /_
-    -_____---   --_
-     //  \ \\   ___-
-   //|\__/  \\  \
-   \_-\_____/  \-\
-        // \\--\|
-   ____//  ||_
-  /_____\ /___\
+I'm listening Beautiful ones - suede
