@@ -1,15 +1,11 @@
 import numpy as np
 
-class linear_regression:
+class regression:
     def __init__(self, X, Y):
         self.x = np.c_[np.ones(X.shape[0]), X]
         self.y = Y
         self.theta = np.random.rand(self.x.shape[1])
         self.N_1 = 1 / self.x.shape[0]
-
-        # for predict thresholder
-
-        self.persize = (int(np.argmax(np.unique(self.y))) - int(np.argmin(np.unique(self.y)))) / int(np.unique(self.y).shape[0])
 
     def Linear(self, iteration):
         # Loss Function is this: sigma ( learningRate * (y - h(x) / 2)^2 )
@@ -47,9 +43,10 @@ class linear_regression:
 
 
     def thrhold(self, noise):
+        self.section = (int(np.argmax(np.unique(self.y))) - int(np.argmin(np.unique(self.y)))) / int(np.unique(self.y).shape[0])
         # Threshold
         for d in range(1, int(np.unique(self.y).shape[0]) + 1):
-            if noise > (self.persize * d):
+            if noise > (self.section * d):
                 pass
             else:
                 return d - 1

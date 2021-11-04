@@ -1,11 +1,11 @@
-import regression as lnreg
+import regression as reg
 from sklearn import datasets
 import matplotlib.pyplot as plt
 import numpy as np
 
 
 def command(X, Y, case, type, option):
-    lnreg1 = lnreg.linear_regression(X, Y)
+    reg1 = reg.regression(X, Y)
 
     # activate option
     if option == "locally_weighted":
@@ -16,18 +16,18 @@ def command(X, Y, case, type, option):
 
     # which type?
     if type == 'linear':
-        print("my estimation is", lnreg1.predict('linear', case))
+        print("my estimation is", reg1.predict('linear', case))
     elif type == 'logistic':
-        print("my estimation is", lnreg1.predict('logistic', case))
+        print("my estimation is", reg1.predict('logistic', case))
     else:
         print("no specified type")
 
     if switcher == True:
-        print("and actual y is", y[int(index)], "\nfinal theta is", lnreg1.theta)
+        print("and actual y is", y[int(index)], "\nfinal theta is", reg1.theta)
     else:
         pass
 
-    return lnreg1
+    return reg1
 
 # bring data
 x, y = datasets._samples_generator.make_blobs(n_samples=200, n_features=2, centers=2, cluster_std=5, random_state=11)
