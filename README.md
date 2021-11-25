@@ -1,2 +1,7 @@
 # Machine-Learning-scratch
-for my own learning
+
+# Import
+numpy, matplotlib
+
+# Next Implementation
+ADALINE
