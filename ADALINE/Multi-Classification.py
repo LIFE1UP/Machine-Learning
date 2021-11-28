@@ -29,5 +29,6 @@ class multi_classification:
         # end
         for i in range(self.cn):
             prs[i] = prs[i] / sums
+        del sums
         return prs
     # end

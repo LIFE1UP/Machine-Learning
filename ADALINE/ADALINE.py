@@ -45,18 +45,21 @@ class perceptron:
         # Calulate gradient and update theta
         hx = np.dot(self.x, self.theta)
         self.theta -= (self.lr * self.N_1) * np.dot(self.x.T, (hx - self.y))
+        del hx
     #end
 
     def GDR_LogLike(self, activation='sigmoid'):
         hx = np.dot(self.x, self.theta)
         hx = self.act_choice(hx, activation)  # activation function (sigmoid)
         self.theta += self.lr * (self.N_1) * np.dot(self.x.T, (self.y - hx))
+        del hx
     #end
 
     def GDR_Cross(self,  activation='sigmoid'):
         hx = np.dot(self.x, self.theta)
         hx = self.act_choice(hx, activation)
         self.theta += self.lr * (self.N_1) * np.dot(self.x.T, (self.y - hx))
+        del hx
     #end
 
     def cost_choice(self, name_c, name_a):
