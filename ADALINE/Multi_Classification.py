@@ -1,4 +1,4 @@
-import ADALINE as ada
+import adaline as ada
 
 class multi_classification:
     def __init__(self, X, Y, class_numbers):

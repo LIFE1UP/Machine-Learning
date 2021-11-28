@@ -1,5 +1,5 @@
-import ADALINE as ada
-import Multi_Classification as mc
+import adaline as ada
+import multi_classification as mc
 from sklearn import datasets
 import matplotlib.pyplot as plt
 import numpy as np
@@ -14,10 +14,6 @@ model = ada.perceptron(x, y)
 model.learning(cost='MSE', activation='step', iteration=100000, lr=0.0001)
 print("")
 
-fig, ax1 = plt.subplots()
-ax1.scatter(x[:, 0], x[:, 1], c=y)
-fig.show()
-
 while 1:
     try:
         index = int(input("index> "))
@@ -25,8 +21,11 @@ while 1:
         predcition = model.predict(case1, threshold='step')
         print(predcition, y[index])
 
+        fig, ax1 = plt.subplots()
+        ax1.scatter(x[:, 0], x[:, 1], c=y)
         ax1.scatter(x[index, 0], x[index, 1], c='b')
         fig.show()
+        del fig, ax1
 
     except:
         continue
