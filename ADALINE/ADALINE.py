@@ -91,3 +91,4 @@ class perceptron:
         predicted_y = np.dot(case, self.theta)
         return self.act_choice(inpt=predicted_y, name=threshold)
     #end
+#end
