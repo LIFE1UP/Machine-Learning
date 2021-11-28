@@ -85,6 +85,7 @@ class perceptron:
         for iters in range(iteration):
             self.cost_choice(cost, activation)
             Counter_intf(iteration, iters)
+        del self.lr
         #end
 
     def predict(self, case, threshold):
