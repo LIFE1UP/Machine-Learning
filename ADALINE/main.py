@@ -1,4 +1,5 @@
-import Regression as rg
+import ADALINE as ada
+import Multi_Classification as mc
 from sklearn import datasets
 import matplotlib.pyplot as plt
 import numpy as np
@@ -9,7 +10,7 @@ x, y = datasets._samples_generator.make_blobs(n_samples=200, n_features=2, cente
 # make an instance to make a machine learning
 x_ = np.c_[np.ones(x.shape[0]), x]
 
-model = rg.perceptron(x, y)
+model = ada.perceptron(x, y)
 model.learning(cost='MSE', activation='step', iteration=100000, lr=0.0001)
 print("")
 
@@ -29,3 +30,4 @@ while 1:
 
     except:
         continue
+    #end
