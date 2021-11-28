@@ -3,5 +3,7 @@
 # Import
 numpy, matplotlib
 
-# Next Implementation
-ADALINE
+# Implementation
+linear regression
+binary perceptron
+activation function, threshold function

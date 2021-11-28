@@ -38,6 +38,7 @@ class perceptron:
             return self.sigmoid(inpt)
         else:
             print("set activation function / function function")
+    #end
 
 # Gradient Descent Rule... Choose your cost function!
     def GDR_MSE(self, activation='noactivation'):
@@ -64,7 +65,8 @@ class perceptron:
         elif name_c == 'LogLike':
             self.GDR_LogLike(name_c)
         elif name_c == 'Cross-Entropy':
-            self.GDR_Cross
+            self.GDR_Cross(name_c)
+    #end
 
 # options
     def localeight(self, case, tau):
@@ -85,3 +87,4 @@ class perceptron:
     def predict(self, case, threshold):
         predicted_y = np.dot(case, self.theta)
         return self.act_choice(inpt=predicted_y, name=threshold)
+    #end
