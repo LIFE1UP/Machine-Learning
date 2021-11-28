@@ -1,9 +1,5 @@
 # Machine-Learning-scratch
+Implementation of machine learning. Nerual Network, perceptron, ADALINE, Multi-classicfication... from SCRATCH
 
-# Import
-numpy, matplotlib
-
-# Implementation
-linear regression
-binary perceptron
-activation function, threshold function
+# Imported Modules
+numpy, matplotlib, sklearn
