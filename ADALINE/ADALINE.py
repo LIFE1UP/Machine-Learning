@@ -39,6 +39,8 @@ class perceptron:
                 GDR_LogLike(actv_fx)
                 Counter_intf(self.iteration, iters)
 
+            return 0
+
         for iters in range(self.iteration):
             self.GDR_MSE(actv_fx)
             Counter_intf(self.iteration, iters)
