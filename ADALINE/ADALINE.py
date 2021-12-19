@@ -27,19 +27,17 @@ class perceptron:
         hx = np.dot(self.x, self.theta)
         hx = self.act_choice(hx, activation)
         self.theta -= (self.lr * self.N_1) * np.dot(self.x.T, (hx - self.y))
-        del hx
 
     def GDR_LogLike(self, activation='sigmoid'):
         hx = np.dot(self.x, self.theta)
         hx = self.act_choice(hx, activation)
         self.theta += self.lr * (self.N_1) * np.dot(self.x.T, (self.y - hx))
-        del hx
 
-    def cost_choice(self, name_c, name_a):
-        if name_c == 'LogLike':
-            self.GDR_LogLike(name_a)
+    def cost_choice(self, cost_fx, actv_fx):
+        if cost_fx == 'LogLike':
+            self.GDR_LogLike(actv_fx)
 
-        return self.GDR_MSE(name_a)
+        return self.GDR_MSE(actv_fx)
 
 
 # Options
