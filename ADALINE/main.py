@@ -1,5 +1,4 @@
 import adaline as ada
-import multi_classification as mc
 from sklearn import datasets
 import matplotlib.pyplot as plt
 import numpy as np
