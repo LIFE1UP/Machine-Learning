@@ -1,5 +1,3 @@
-# Machine-Learning-scratch
-Implementation of machine learning. Nerual Network, perceptron, ADALINE, Multi-classicfication... from SCRATCH
+# Machine Learning from Scratch#
 
-# Imported Modules
-numpy, matplotlib, sklearn
+import numpy, mtplotlib, sklearn, pytorch, tensorflow
