@@ -1,3 +1,3 @@
-# Machine Learning from Scratch#
+# Machine Learning from Scratch
 
 import numpy, mtplotlib, sklearn, pytorch, tensorflow
