@@ -23,7 +23,6 @@ while 1:
         ax1.scatter(x[:, 1], x[:, 2], c=y)
         ax1.scatter(x[index, 1], x[index, 2], c='b')
         fig.show()
-        del fig, ax1
 
     except:
         continue

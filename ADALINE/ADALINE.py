@@ -17,7 +17,7 @@ class perceptron:
 # Activation/Threshold f(x)
     def act_choice(self, inpt, name):
         if name == 'sigmoid':
-            return 1.0 / (1.0 + (2.718 ** -z))
+            return 1.0 / (1.0 + (2.718 ** -inpt))
 
         return inpt
 
@@ -35,9 +35,13 @@ class perceptron:
 
     def cost_choice(self, cost_fx, actv_fx):
         if cost_fx == 'LogLike':
-            self.GDR_LogLike(actv_fx)
+            for iters in range(self.iteration):
+                GDR_LogLike(actv_fx)
+                Counter_intf(self.iteration, iters)
 
-        return self.GDR_MSE(actv_fx)
+        for iters in range(self.iteration):
+            self.GDR_MSE(actv_fx)
+            Counter_intf(self.iteration, iters)
 
 
 # Options
@@ -50,10 +54,9 @@ class perceptron:
 # Predict
     def learning(self, cost, activation, iteration, lr=0.0001):
         self.lr = lr
-        for iters in range(iteration):
-            self.cost_choice(cost, activation)
-            Counter_intf(iteration, iters)
-        del self.lr
+        self.iteration = iteration
+        self.cost_choice(cost, activation)
+        del self.lr, self.iteration
 
     def predict(self, case, threshold):
         predicted_y = np.dot(case, self.theta)
