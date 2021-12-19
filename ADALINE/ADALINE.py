@@ -15,12 +15,9 @@ class perceptron:
 
 
 # Activation/Threshold f(x)
-    def sigmoid(self, z):
-        return 1.0 / (1.0 + (2.718 ** -z))
-
     def act_choice(self, inpt, name):
         if name == 'sigmoid':
-            return self.sigmoid(inpt)
+            return 1.0 / (1.0 + (2.718 ** -z))
 
         return inpt
 
@@ -38,17 +35,9 @@ class perceptron:
         self.theta += self.lr * (self.N_1) * np.dot(self.x.T, (self.y - hx))
         del hx
 
-    def GDR_Cross(self,  activation='sigmoid'):
-        hx = np.dot(self.x, self.theta)
-        hx = self.act_choice(hx, activation)
-        self.theta += self.lr * (self.N_1) * np.dot(self.x.T, (self.y - hx))
-        del hx
-
     def cost_choice(self, name_c, name_a):
         if name_c == 'LogLike':
             self.GDR_LogLike(name_a)
-        elif name_c == 'Cross-Entropy':
-            self.GDR_Cross(name_a)
 
         return self.GDR_MSE(name_a)
 
