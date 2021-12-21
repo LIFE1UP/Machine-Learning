@@ -8,7 +8,7 @@ from model import NeuralNet
 
 
 # load our train data file
-with open('intents.json', 'r') as f:
+with open('textbook.json', 'r', encoding='utf-8') as f:
     trainData = json.load(f)
 
 allWords = []
@@ -22,8 +22,8 @@ for intent in trainData['intents']:
         allWords.extend(tk_sentence)
         xy.append((tk_sentence, intent['tag']))
 
-allWords = sorted(set(allWords))
-tags = sorted(set(tags))
+allWords = sorted(allWords)
+tags = sorted(tags)
 
 x = []
 y = []

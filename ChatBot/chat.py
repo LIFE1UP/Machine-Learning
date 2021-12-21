@@ -17,7 +17,7 @@ except:
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('intents.json', 'r') as json_data:
+with open('textbook.json', 'r') as json_data:
     intents = json.load(json_data)
 
 inptSize = data["inptSize"]
@@ -31,8 +31,8 @@ model = NeuralNet(inptSize, hidnSize, ouptSize).to(device)
 model.load_state_dict(modelState)
 model.eval()
 
-botName = "Hellga: "
-print("What can I help you?")
+botName = input("My name is?: ") + ": "
+print(f"{botName}nice to meet you!")
 while 1:
     sentence = input("sent: ")
     if sentence == "exit":
