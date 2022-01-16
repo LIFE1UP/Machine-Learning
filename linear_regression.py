@@ -46,8 +46,18 @@ def predict(case):
 
 index = random.randrange(len(testY))
 prediction = predict(testX[index,:])
-print(f"pred: {prediction:.3f}, actual target: {testY[index]}")
 
+# cost funtion
+def mean_absolute_error():
+    global testX, testY
+    predictY = np.dot(testX, weight)
+    loss = np.sum(np.dot(testX.T,abs(predictY - testY)))
+    print(f"cost: {loss}")
+# def
+
+mean_absolute_error()
+
+# <visualization>
 # making decision boundaries
 baseX = np.linspace(trainX[:,0].min(), trainX[:,0].max(), 2)
 boundary1, boundary2 = list(), list()
@@ -79,13 +89,3 @@ plt.plot(boundary2[:,0], boundary2[:,1], c='black')
 plt.xlabel(f"pred: {prediction:.0f} and actual target: {testY[index]}")
 plt.title("[yellow:2] [green:1] [violet:0]")
 plt.show()
-
-# cost funtion
-def mean_absolute_error():
-    global testX, testY
-    predictY = np.dot(testX, weight)
-    loss = np.sum(np.dot(testX.T,abs(predictY - testY)))
-    print(f"cost: {loss}")
-# def
-
-mean_absolute_error()
