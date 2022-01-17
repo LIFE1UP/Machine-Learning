@@ -52,18 +52,18 @@ def mean_squared_error():
     global testX, testY
     
     predictY = np.dot(testX, weight)
-    loss = np.sum(np.dot(testX.T, (predictY - testY)**2))
+    loss = np.mean((predictY - testY)**2)
     
-    print(f"cost: {loss}")
+    print(f"cost: {loss:.3f}")
 # MSE
 
 def mean_absolute_error():
     global testX, testY
-    
+
     predictY = np.dot(testX, weight)
-    loss = np.sum(np.dot(testX.T, abs(predictY - testY)))
+    loss = np.mean(abs(predictY - testY))
     
-    print(f"cost: {loss}")
+    print(f"cost: {loss:.3f}")
 # MAE
 
 mean_squared_error()
