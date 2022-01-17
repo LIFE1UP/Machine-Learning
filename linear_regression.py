@@ -48,13 +48,25 @@ index = random.randrange(len(testY))
 prediction = predict(testX[index,:])
 
 # cost funtion
+def mean_squared_error():
+    global testX, testY
+    
+    predictY = np.dot(testX, weight)
+    loss = np.sum(np.dot(testX.T, (predictY - testY)**2))
+    
+    print(f"cost: {loss}")
+# MSE
+
 def mean_absolute_error():
     global testX, testY
+    
     predictY = np.dot(testX, weight)
-    loss = np.sum(np.dot(testX.T,abs(predictY - testY)))
+    loss = np.sum(np.dot(testX.T, abs(predictY - testY)))
+    
     print(f"cost: {loss}")
-# def
+# MAE
 
+mean_squared_error()
 mean_absolute_error()
 
 # <visualization>
@@ -81,11 +93,15 @@ for n in baseX:
 boundary1 = np.array(boundary1)
 boundary2 = np.array(boundary2)
 
+# matplotlib
 plt.figure(figsize=(5,5))
 plt.scatter(x=trainX[:,0], y=trainX[:,1], s=50, alpha=1, c=trainY)
 plt.scatter(x=testX[index,0], y=testX[index,1], c='r', s=200, marker='+')
 plt.plot(boundary1[:,0], boundary1[:,1], c='black')
 plt.plot(boundary2[:,0], boundary2[:,1], c='black')
-plt.xlabel(f"pred: {prediction:.0f} and actual target: {testY[index]}")
-plt.title("[yellow:2] [green:1] [violet:0]")
+plt.xlim(trainX[:,0].min() - 0.5, trainX[:,0].max() + 0.5)
+plt.grid()
+plt.xlabel(f"Prediction: {prediction:.0f}, Actual Target: {testY[index]}")
+plt.ylabel("Yellow = 2, Green = 1, Violet = 0")
+plt.title("load_iris")
 plt.show()
