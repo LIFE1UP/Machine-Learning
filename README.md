@@ -1,5 +1,5 @@
-# Machine Learning From Scratch
-Machine Learning only with numpy! (* using sklearn to load datasets) Basic programming to understand A.I!
+# Basic Math to Understand DNN
+I made clean codes for DNN learner.
 
-# Import
+## Import
 numpy, sklearn
