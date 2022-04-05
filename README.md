@@ -1,5 +1,6 @@
 # Basic Math to Understand DNN
-I made clean codes for DNN learner.
+I made clean GDR codes for DNN learner.
 
 ## Import
-numpy, sklearn
+* sklearn
+* numpy
